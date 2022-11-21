@@ -1,7 +1,7 @@
 /*  const turmas =["HC1","JS1","JS2","REST1","REST2"];
     const estudantes =["Aluno1","Aluno2,"Aluno3"];
     const cursos =["HTML e CSS","JavaScript","APIs REST"]; */
-
+//Arrays e Objetos
 const cursos = [{
     curso:"HTML e CSS",
     descricao:"Descrição genérica",
@@ -17,7 +17,7 @@ const cursos = [{
     descricao:"Descrição genérica",
     duracao:"6 Meses",
     valor:2000
-}]
+}];
 
 const turmas = [{
     turma:"Hipátia",
@@ -83,7 +83,7 @@ const turmas = [{
     numeroDeAlunos:90,
     periodo:"integral",
     concluida:false
-}]
+}];
 
 const estudantes = [{
     estudante:"Chris Evans",
@@ -109,4 +109,15 @@ const estudantes = [{
     nParcelas:1,
     desconto:true,
     parcelas:500
-}]
+}];
+
+//Condicionais
+const parcelarCurso =(nomeCurso,valor,parcela)=>{
+    if (parcela <= 2) {
+        valor = valor*0.8
+        console.log(`O curso de ${nomeCurso} ficou no valor total de R$${valor}. Em ${parcela}X de R$${valor/parcela} reais. Foi concedido desconto de 20%`)
+    }else{
+        console.log(`O curso ${nomeCurso} ficou no valor total de R$${valor}. Em ${parcela}x de ${(valor/parcela).toFixed(2)} reais.`);
+    }
+}
+parcelarCurso(cursos[0].curso,cursos[0].valor,estudantes[2].nParcelas);
