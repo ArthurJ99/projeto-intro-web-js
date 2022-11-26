@@ -112,14 +112,14 @@ const estudantes = [{
 }];
 
 //Condicionais
-const parcelarCurso =(nomeCurso,valor,parcela)=>{
+/* const parcelarCurso =(nomeCurso,valor,parcela)=>{
     if (parcela <= 2) {
         valor = valor*0.8
         console.log(`O curso de ${nomeCurso} ficou no valor total de R$${valor}. Em ${parcela}X de R$${valor/parcela} reais. Foi concedido desconto de 20%`)
     }else{
         console.log(`O curso ${nomeCurso} ficou no valor total de R$${valor}. Em ${parcela}x de ${(valor/parcela).toFixed(2)} reais.`);
     }
-}
+} */
 //parcelarCurso(cursos[0].curso,cursos[0].valor,estudantes[2].nParcelas);
 
 //Laços
@@ -166,5 +166,57 @@ const matricular=(nome,curso,turma,nParcelas)=>{
     console.log("Aluno Matriculado",estudantes[estudantes.length -1]);
 }
 //matricular("arthur jordi","HTML e CSS","Curie",2)
+
+const descontoParcela=(nParcelas)=>{
+    if (nParcelas<=2) {
+        return 0.2
+    } else {
+        return 0
+    }
+}
+
+const parcelarCurso=(valorCursos,nParcelas)=>{
+    let totalCompra = 0
+    let desconto = 1
+    for (const valor of valorCursos) {
+        totalCompra+=valor
+    }
+    switch (valorCursos.length) {
+        case 0:
+            return "O carrinho está vazio"
+        case 1:
+            desconto -= descontoParcela(nParcelas) 
+            totalCompra =totalCompra*desconto
+            if (desconto==1) {
+                return `O valor do pagamento é de R$${totalCompra.toFixed(2)}, parcelado em ${nParcelas}X de R$ ${(totalCompra/nParcelas).toFixed(2)}`
+            }else{
+                return `O valor do pagamento é de R$${totalCompra.toFixed(2)} com ${(100-desconto*100).toFixed(0)}% de desconto, parcelado em ${nParcelas}X de R$ ${(totalCompra/nParcelas).toFixed(2)}`
+            }
+        case 2:
+            desconto -= 0.10
+            desconto -= descontoParcela(nParcelas) 
+            totalCompra =totalCompra*desconto
+            if (desconto==1) {
+                return `O valor do pagamento é de R$${totalCompra.toFixed(2)}, parcelado em ${nParcelas}X de R$ ${(totalCompra/nParcelas).toFixed(2)}`
+            }else{
+                return `O valor do pagamento é de R$${totalCompra.toFixed(2)} com ${(100-desconto*100).toFixed(0)}% de desconto, parcelado em ${nParcelas}X de R$ ${(totalCompra/nParcelas).toFixed(2)}`
+            }
+        default:
+            desconto -= 0.15
+            desconto -= descontoParcela(nParcelas) 
+            totalCompra =totalCompra*desconto
+            if (desconto==1) {
+                return `O valor do pagamento é de R$${totalCompra.toFixed(2)}, parcelado em ${nParcelas}X de R$ ${(totalCompra/nParcelas).toFixed(2)}`
+            }else{
+                return `O valor do pagamento é de R$${totalCompra.toFixed(2)} com ${(100-desconto*100).toFixed(0)}% de desconto, parcelado em ${nParcelas}X de R$ ${(totalCompra/nParcelas).toFixed(2)}`
+            }
+    }
+}
+
+const carrinhoCursos=[500,900,400]
+
+console.log(parcelarCurso(carrinhoCursos,2));
+
+
 
 
