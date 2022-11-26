@@ -30,7 +30,7 @@ const turmas = [{
 },{
     turma:"Sibyla",
     curso:"JavaScript",
-    inicio:"30/09/2022",
+    inicio:"30/10/2022",
     termino:"30/12/2022",
     numeroDeAlunos:200,
     periodo:"integral",
@@ -53,7 +53,7 @@ const turmas = [{
     concluida:false
 },{
     turma:"Clarke",
-    curso:"HTM e CSS",
+    curso:"HTML e CSS",
     inicio:"04/07/2022",
     termino:"04/09/2022",
     numeroDeAlunos:200,
@@ -70,7 +70,7 @@ const turmas = [{
 },{
     turma:"Elion",
     curso:"APIsRest",
-    inicio:"18/01/2022",
+    inicio:"12/01/2022",
     termino:"12/06/2022",
     numeroDeAlunos:200,
     periodo:"noturno",
@@ -79,7 +79,7 @@ const turmas = [{
     turma:"Burnell",
     curso:"APIsRest",
     inicio:"18/10/2022",
-    termino:"18/04/2022",
+    termino:"18/04/2023",
     numeroDeAlunos:90,
     periodo:"integral",
     concluida:false
@@ -120,4 +120,51 @@ const parcelarCurso =(nomeCurso,valor,parcela)=>{
         console.log(`O curso ${nomeCurso} ficou no valor total de R$${valor}. Em ${parcela}x de ${(valor/parcela).toFixed(2)} reais.`);
     }
 }
-parcelarCurso(cursos[0].curso,cursos[0].valor,estudantes[2].nParcelas);
+//parcelarCurso(cursos[0].curso,cursos[0].valor,estudantes[2].nParcelas);
+
+//Laços
+
+const buscarCurso=(nomeCurso)=>{
+    for(i=0;i<cursos.length;i++){
+        if (nomeCurso === cursos[i].curso.toLowerCase()){
+            return cursos[i]
+        }
+    }
+}
+
+//console.log(buscarCurso("html e css".toLowerCase()));
+
+const buscarTurma=(nomeTurma)=>{
+    for(i=0;i<turmas.length;i++){
+        if (nomeTurma === turmas[i].turma.toLowerCase()){
+            return turmas[i]
+        }
+    }
+}
+
+//console.log(buscarTurma("burnell".toLowerCase()));
+
+const buscarEstudante=(nomeEstudante)=>{
+    for(i=0;i<estudantes.length;i++){
+        if(nomeEstudante === estudantes[i].estudante.toLowerCase()){
+            return estudantes[i]
+        }
+    }
+}
+
+//console.log(buscarEstudante("lashana lynch".toLowerCase()));
+
+
+const matricular=(nome,curso,turma,nParcelas)=>{
+    estudantes.push({
+        estudante:nome,
+        turma:turma,
+        curso:curso,
+        nParcelas:nParcelas
+    })
+    console.log(estudantes);
+    console.log("Aluno Matriculado",estudantes[estudantes.length -1]);
+}
+//matricular("arthur jordi","HTML e CSS","Curie",2)
+
+
