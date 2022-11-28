@@ -1,7 +1,3 @@
-/*  const turmas =["HC1","JS1","JS2","REST1","REST2"];
-    const estudantes =["Aluno1","Aluno2,"Aluno3"];
-    const cursos =["HTML e CSS","JavaScript","APIs REST"]; */
-//Arrays e Objetos
 const cursos = [{
     curso:"HTML e CSS",
     descricao:"Descrição genérica",
@@ -111,17 +107,6 @@ const estudantes = [{
     parcelas:500
 }];
 
-//Condicionais
-/* const parcelarCurso =(nomeCurso,valor,parcela)=>{
-    if (parcela <= 2) {
-        valor = valor*0.8
-        console.log(`O curso de ${nomeCurso} ficou no valor total de R$${valor}. Em ${parcela}X de R$${valor/parcela} reais. Foi concedido desconto de 20%`)
-    }else{
-        console.log(`O curso ${nomeCurso} ficou no valor total de R$${valor}. Em ${parcela}x de ${(valor/parcela).toFixed(2)} reais.`);
-    }
-} */
-//parcelarCurso(cursos[0].curso,cursos[0].valor,estudantes[2].nParcelas);
-
 //Laços
 
 const buscarCurso=(nomeCurso)=>{
@@ -140,9 +125,9 @@ const buscarTurma=(nomeTurma)=>{
             return turmas[i]
         }
     }
-}
+} 
 
-//console.log(buscarTurma("burnell".toLowerCase()));
+console.log(buscarTurma("teste".toLowerCase()));
 
 const buscarEstudante=(nomeEstudante)=>{
     for(i=0;i<estudantes.length;i++){
@@ -160,13 +145,17 @@ const matricular=(nome,curso,turma,nParcelas)=>{
         estudante:nome,
         turma:turma,
         curso:curso,
-        nParcelas:nParcelas
+        valor:buscarCurso(curso.toLowerCase()).valor,
+        nParcelas:nParcelas,
+        desconto:nParcelas<=2,
+        parcelas:(buscarCurso(curso.toLowerCase()).valor/nParcelas)
     })
     console.log(estudantes);
     console.log("Aluno Matriculado",estudantes[estudantes.length -1]);
 }
 //matricular("arthur jordi","HTML e CSS","Curie",2)
 
+//FUNÇÕES DE DESCONTO
 const descontoParcela=(nParcelas)=>{
     if (nParcelas<=2) {
         return 0.2
@@ -213,10 +202,20 @@ const parcelarCurso=(valorCursos,nParcelas)=>{
     }
 }
 
-const carrinhoCursos=[500,900,400]
+const carrinhoCursos=[]
 
-console.log(parcelarCurso(carrinhoCursos,2));
+//console.log(parcelarCurso(carrinhoCursos,2));
+
+const adcValorCarrinho=(nomeCurso)=>{
+    carrinhoCursos.push(nomeCurso.valor)
+}
+
+//console.log(adcValorCarrinho(buscarCurso("html e css")));
+//console.log(carrinhoCursos);
+
+const relatorioEstudante=(nomeEstudante)=>{
+    return `Aluno: ${buscarEstudante(nomeEstudante).estudante}\nTurma: ${buscarEstudante(nomeEstudante).turma}\nCurso: ${buscarEstudante(nomeEstudante).curso}\nValor Total: R$${buscarEstudante(nomeEstudante).valor}\nValor Parcela: R$${buscarEstudante(nomeEstudante).parcelas}\nN* Parcelas: ${buscarEstudante(nomeEstudante).nParcelas}`
+}
 
 
-
-
+//console.log(relatorioEstudante("chris evans".toLowerCase()));
