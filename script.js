@@ -120,14 +120,16 @@ const buscarCurso=(nomeCurso)=>{
 //console.log(buscarCurso("html e css".toLowerCase()));
 
 const buscarTurma=(nomeTurma)=>{
-    for(i=0;i<turmas.length;i++){
-        if (nomeTurma === turmas[i].turma.toLowerCase()){
-            return turmas[i]
-        }
+    const resultBusca = nomeTurma
+    let busca=turmas.filter(obj => obj.turma.toLowerCase() === resultBusca)
+    if (busca.length<1) {
+        console.log('Turma não encontrada!');
+    } else {
+        console.log(busca[0]);
     }
 } 
 
-console.log(buscarTurma("teste".toLowerCase()));
+//buscarTurma("Burnell".toLowerCase());
 
 const buscarEstudante=(nomeEstudante)=>{
     for(i=0;i<estudantes.length;i++){
