@@ -110,14 +110,11 @@ const estudantes = [{
 //Laços
 
 const buscarCurso=(nomeCurso)=>{
-    for(i=0;i<cursos.length;i++){
-        if (nomeCurso === cursos[i].curso.toLowerCase()){
-            return cursos[i]
-        }
-    }
+    const busca = cursos.find(element=> element.curso.toLowerCase()===nomeCurso);
+    return busca
 }
 
-//console.log(buscarCurso("html e css".toLowerCase()));
+//console.log(buscarCurso("apisrest".toLowerCase()));
 
 const buscarTurma=(nomeTurma)=>{
     const resultBusca = nomeTurma
