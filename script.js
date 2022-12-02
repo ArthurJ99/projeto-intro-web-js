@@ -1,4 +1,5 @@
-const cursos = [{
+const cursos = [
+    {
     curso:"HTML e CSS",
     descricao:"Descrição genérica",
     duracao:"1 Mês",
@@ -13,9 +14,11 @@ const cursos = [{
     descricao:"Descrição genérica",
     duracao:"6 Meses",
     valor:2000
-}];
+}
+];
 
-const turmas = [{
+const turmas = [
+    {
     turma:"Hipátia",
     curso:"JavaScript",
     inicio:"30/11/2022",
@@ -79,9 +82,11 @@ const turmas = [{
     numeroDeAlunos:90,
     periodo:"integral",
     concluida:false
-}];
+}
+];
 
-const estudantes = [{
+const estudantes = [
+    {
     estudante:"Chris Evans",
     turma:"Hipátia",
     curso:"JavaScript",
@@ -89,7 +94,8 @@ const estudantes = [{
     nParcelas:9,
     desconto:false,
     parcelas:100
-},{
+},
+    {
     estudante:"Halle Berry",
     turma:"Burnell",
     curso:"APIsRest",
@@ -97,7 +103,8 @@ const estudantes = [{
     nParcelas:4,
     desconto:false,
     parcelas:500
-},{
+    },
+    {
     estudante:"Lashana Lynch",
     turma:"Zhenyi",
     curso:"HTML e CSS",
@@ -105,7 +112,8 @@ const estudantes = [{
     nParcelas:1,
     desconto:true,
     parcelas:500
-}];
+    }
+];
 
 //Laços
 
@@ -129,14 +137,15 @@ const buscarTurma=(nomeTurma)=>{
 //buscarTurma("Burnell".toLowerCase());
 
 const buscarEstudante=(nomeEstudante)=>{
-    for(i=0;i<estudantes.length;i++){
-        if(nomeEstudante === estudantes[i].estudante.toLowerCase()){
+    for (i = 0; i < estudantes.length; i++){
+        if (estudantes[i].estudante.toLowerCase().startsWith(nomeEstudante.toLowerCase())) {
             return estudantes[i]
         }
     }
+    return 'Aluno não encontrado!'
 }
 
-//console.log(buscarEstudante("lashana lynch".toLowerCase()));
+//console.log(buscarEstudante(""));
 
 
 const matricular=(nome,curso,turma,nParcelas)=>{
