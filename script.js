@@ -215,10 +215,10 @@ const carrinhoCursos=[]
 //console.log(parcelarCurso(carrinhoCursos,2));
 
 const adcValorCarrinho=(nomeCurso)=>{
-    carrinhoCursos.push(nomeCurso.valor)
+    carrinhoCursos.push(buscarCurso(nomeCurso).valor)
 }
 
-//console.log(adcValorCarrinho(buscarCurso("html e css")));
+//adcValorCarrinho("javascript");
 //console.log(carrinhoCursos);
 
 const relatorioEstudante=(nomeEstudante)=>{
