@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: lightgoldenrodyellow;
+}
+
+main section:nth-child(1) {
+    background-color: lightcoral;
+}
+
+main section:nth-child(2) {
+    background-color: lightsalmon;
+}
+
+main section:nth-child(3) {
+    background-color: lightseagreen;
+}
+
+footer {
+    background-color: lightgreen;
+}
+
+#logo {
+    height: 5vh;
+    position: absolute;
+    left: 15%;
+}
+
+.menu-h {
+    list-style: none;
+    padding: 0;
+    background-color: lightblue;
+}
+
+.menu-h ul{
+    text-align: right;
+    max-width: 1400px;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-h ul li {
+    display: inline;
+}
+
+.menu-h ul li a {
+    color: rgb(26, 18, 65);
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+.menu-h ul li a:hover {
+    background-color: brown;
+}

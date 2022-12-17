@@ -6,78 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LabEscola</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <header>
       <a href="./index.html">
         <img src="./assets/LabEscola-Logo.png" alt="LabEscola logo" id="logo" />
       </a>
-
-      <nav>
+      <nav class="menu-h">
         <ul>
           <li><a href="./index.html">Home</a></li>
-
           <li><a href="./cursos.html">Cursos</a></li>
-
           <li><a href="./contato.html">Contato</a></li>
-
-          <li><a href="./adm.html">Area ADM</a></li>
+          <li><a href="./adm.html">Área ADM</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section>
-        <section>
-          <h1><b>Descubra o novo ensino!</b></h1>
-          <p>Aprenda de verdade, no seu tempo, no seu ritmo!</p>
-        </section>
+        <h1><b>Descubra o novo ensino!</b></h1>
+        <p>Aprenda de verdade, no seu tempo, no seu ritmo!</p>
         <a href="./cursos.html">Conheça nossos cursos</a>
       </section>
       <section>
-        <section>
-          <h3>Sobre Nós</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            accusantium fuga incidunt labore. Rem, quia, non impedit labore
-            molestias maxime architecto odit aut necessitatibus sunt alias
-            aperiam dolorum soluta praesentium!
-          </p>
-        </section>
+        <h3>Sobre Nós</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          accusantium fuga incidunt labore. Rem, quia, non impedit labore
+          molestias maxime architecto odit aut necessitatibus sunt alias aperiam
+          dolorum soluta praesentium!
+        </p>
       </section>
       <section>
         <h3>Depoimentos</h3>
         <article>
-          <img src="./assets/card-depoimento1.png" alt="imagem" />Lorem ipsum,
-          dolor sit amet consectetur adipisicing elit. Neque repellat esse
-          commodi, iusto aperiam hic cumque sit at. Consequuntur ab deserunt
-          saepe iusto sequi voluptatum doloribus, ipsum necessitatibus iure
-          dicta?
+          <figure>
+            <img src="./assets/card-depoimento1.png" alt="imagem" />
+            <figcaption>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+              repellat esse commodi, iusto aperiam hic cumque sit at.
+              Consequuntur ab deserunt saepe iusto sequi voluptatum doloribus,
+              ipsum necessitatibus iure dicta?
+            </figcaption>
+          </figure>
         </article>
         <article>
-          <img src="./assets/card-depoimento2.png" alt="imagem" />
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas maiores
-          ea quae quam temporibus sint pariatur. Vitae aliquid cumque nemo
-          ducimus possimus similique praesentium ad. Aliquid quas doloremque
-          fugit excepturi.
+          <figure>
+            <img src="./assets/card-depoimento2.png" alt="imagem" />
+            <figcaption>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas
+              maiores ea quae quam temporibus sint pariatur. Vitae aliquid
+              cumque nemo ducimus possimus similique praesentium ad. Aliquid
+              quas doloremque fugit excepturi.
+            </figcaption>
+          </figure>
         </article>
         <article>
-          <img src="./assets/card-depoimento3.png" alt="imagem" />
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem amet sed
-          assumenda corrupti reiciendis est aut facilis ex repellat nisi at
-          consequuntur debitis, voluptates natus excepturi optio iste dolore
-          eius.
+          <figure>
+            <img src="./assets/card-depoimento3.png" alt="imagem" />
+            <figcaption>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem amet
+              sed assumenda corrupti reiciendis est aut facilis ex repellat nisi
+              at consequuntur debitis, voluptates natus excepturi optio iste
+              dolore eius.
+            </figcaption>
+          </figure>
         </article>
         <article>
-          <img src="./assets/card-depoimento4.png" alt="imagem" />
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
-          doloremque corporis fugit est expedita alias quibusdam porro incidunt
-          perferendis enim quas, explicabo ut non aliquid numquam quae
-          necessitatibus aliquam quia?
+          <figure>
+            <img src="./assets/card-depoimento4.png" alt="imagem" />
+            <figcaption>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
+              doloremque corporis fugit est expedita alias quibusdam porro
+              incidunt perferendis enim quas, explicabo ut non aliquid numquam
+              quae necessitatibus aliquam quia?
+            </figcaption>
+          </figure>
         </article>
       </section>
     </main>
     <footer>
       <img src="./assets/LabEscola-Logo.png" alt="LabEscola-Logo" />
+      <ul>
+        <li>
+          Endereço
+          <div id="map"></div>
+        </li>
+        <li>Links</li>
+        <li>Redes sociais</li>
+        <li>Área restrita</li>
+      </ul>
     </footer>
     <a href=""
       ><img
