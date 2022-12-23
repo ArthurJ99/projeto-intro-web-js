@@ -192,3 +192,62 @@ footer {
 
 /* Footer */
 
+footer {
+    height: 35rem;
+    padding-left: 13rem;
+}
+
+#footer-logo {
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+}
+
+footer ul {
+    list-style: none;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 8.9rem;
+}
+
+footer ul li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px
+}
+
+#map {
+    width: 28.063rem;
+    height: 16.813rem;
+    margin-top: 1rem;
+    border: 2px solid black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.redes-sociais>li {
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: .2rem;
+}
+
+.bloco-footer {
+    display: flex;
+}
+
+.footer-links li {
+    padding-top: .8rem;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #0E0E0E;
+}
+
+.footer-adm li {
+    padding-top: .8rem;
+}

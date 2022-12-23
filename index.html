@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
     <title>LabEscola</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="./index.css" />
@@ -87,24 +92,75 @@
         </article>
       </section>
     </main>
-    <footer class="home-footer">
-      <img src="./assets/LabEscola-Logo.png" alt="LabEscola-Logo" id="footer-logo"/>
-      <ul>
-        <li>
+    <footer>
+      <div id="footer-logo">
+        <img src="./assets/LabEscola-Logo.png" alt="LabEscola-Logo" />
+      </div>
+      <div class="bloco-footer">
+        <ul>
           Endereço
-          <div id="map"></div>
-        </li>
-        <li>Links</li>
-        <li>Redes sociais</li>
-        <li>Área restrita</li>
-      </ul>
+          <div id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.2496426112093!2d-46.698635612747196!3d-23.568494826000375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1671740975962!5m2!1spt-BR!2sbr"
+              width="445"
+              height="265"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+          </div>
+        </ul>
+        <ul class="footer-links">
+          Links
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./cursos.html">Cursos</a></li>
+          <li>Blog</li>
+          <li><a href="./contato.html">Fale Conosco</a></li>
+          <li>Termos e Condições</li>
+          <li>Política de Privacidade</li>
+          <li>FAQ</li>
+        </ul>
+        <ul>
+          Redes sociais
+          <div class="redes-sociais">
+            <li>
+              <a href="https://twitter.com"
+                ><img src="./assets/twitter-logo.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://br.linkedin.com"
+                ><img src="./assets/linkedin-logo.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com"
+                ><img src="./assets/facebook-logo.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com"
+                ><img src="./assets/instagram-logo.png" alt=""
+              /></a>
+            </li>
+          </div>
+        </ul>
+        <ul class="footer-adm">
+          Área restrita
+          <li>Área administrativa</li>
+          <li>Espaço do aluno</li>
+        </ul>
+      </div>
     </footer>
     <div class="whatsapp-button">
       <a href="https://www.whatsapp.com"
         ><img
           src="./assets/logos_whatsapp-icon.png"
           alt="logo do whatsapp"
-          id="whatsapp-logo" width="70rem"
+          id="whatsapp-logo"
+          width="70rem"
       /></a>
     </div>
   </body>
