@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+header {
+    background-color: lightgoldenrodyellow;
+}
+
+main>section:nth-child(1) {
+    background-color: #F6C34A;
+}
+
+main>section:nth-child(2) {
+    background-color: #0E0E0E;
+}
+
+footer {
+    background-color: #F6C34A;
+}
+
+/* Header */
+
+#logo {
+    height: 5vh;
+    position: absolute;
+    left: 15%;
+    top: 1.5%;
+}
+
+.menu-h {
+    list-style: none;
+    padding: 0;
+    height: 5em;
+    background-color: #FBFBFB;
+}
+
+.menu-h ul {
+    text-align: right;
+    max-width: 87.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-h ul li {
+    display: inline;
+}
+
+.menu-h ul li a {
+    color: #0E0E0E;
+    padding: 30px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .5s;
+}
+
+.menu-h ul li a:hover {
+    background-color: #e2dfdffd;
+}
+
+/* Cursos section 1 */
+.cursos-section1 {
+    height: 46rem;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.cursos-section1>article {
+    background-color: #FBFBFB;
+    display: inline-block;
+    width: 25rem;
+    height: 21rem;
+    border-radius: 10px;
+    margin: 4rem 1.5rem;
+}
+
+.cursos-section1>article>h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 51px;
+    margin-top: 2rem;
+}
+
+.cursos-section1>article>p {
+    margin: 3.2rem;
+    text-align: left;
+}
+
+.button-section1 {
+    background-color: #0E0E0E;
+    width: 28.125rem;
+    height: 4.938rem;
+    text-align: center;
+    border-radius: 9px;
+    padding-top: 1.3rem;
+    margin-left: 44.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #FBFBFB;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.button-section1:hover {
+    background-color: #0e0e0ee8;
+}
+
+
+
+/* Cursos section 2 */
+
+.cursos-section2 {
+    background-color: #0E0E0E;
+    height: 50rem;
+}
+
+
+/* Footer */
+
+footer {
+    height: 35rem;
+    padding-left: 13rem;
+}
+
+#footer-logo {
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+}
+
+footer ul {
+    list-style: none;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 8.9rem;
+}
+
+footer ul li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px
+}
+
+#map {
+    width: 28.063rem;
+    height: 16.813rem;
+    margin-top: 1rem;
+    border: 2px solid black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.redes-sociais>li {
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: .2rem;
+}
+
+.bloco-footer {
+    display: flex;
+}
+
+.footer-links li {
+    padding-top: .8rem;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #0E0E0E;
+}
+
+.footer-adm li {
+    padding-top: .8rem;
+}
