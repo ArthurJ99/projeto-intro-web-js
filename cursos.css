@@ -22,6 +22,18 @@ footer {
     background-color: #F6C34A;
 }
 
+/* Botão do Whatsapp */
+
+.whatsapp-button {
+    height: 5vh;
+    width: 5vh;
+    background-color: transparent;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 150px;
+    right: 100px;
+}
+
 /* Header */
 
 #logo {
@@ -116,9 +128,35 @@ footer {
 
 .cursos-section2 {
     background-color: #0E0E0E;
-    height: 50rem;
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30rem;
+    row-gap: 2.5rem;
 }
 
+.cursos-section2>article {
+    background-color: white;
+    width: 58.125rem;
+    height: 14rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cursos-section2>article {
+    display: flex;
+}
+
+.cursos-section2>article>ul>h3 {
+    margin-bottom: 1rem;
+}
+
+.cursos-section2>article>ul {
+    list-style: none;
+}
 
 /* Footer */
 
