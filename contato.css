@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background-color: #0E0E0E;
+    height: 50rem;
+}
+
+footer {
+    background-color: #F6C34A;
+}
+
+/* Header */
+
+#logo {
+    height: 5vh;
+    position: absolute;
+    left: 15%;
+    top: 1.5%;
+}
+
+.menu-h {
+    list-style: none;
+    padding: 0;
+    height: 5em;
+    background-color: #FBFBFB;
+}
+
+.menu-h ul {
+    text-align: right;
+    max-width: 87.5rem;
+    list-style: none;
+    padding: 0;
+    font-weight: 700;
+}
+
+.menu-h ul li {
+    display: inline;
+}
+
+.menu-h ul li a {
+    color: #0E0E0E;
+    padding: 30px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .5s;
+}
+
+.menu-h ul li a:hover {
+    background-color: #e2dfdffd;
+}
+
+#contato {
+    text-decoration: underline
+}
+
+/* section 1 */
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 7rem;
+}
+
+.contato-section {
+    height: 35.625rem;
+    width: 30.385rem;
+    border-radius: 8.45488px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contato-formulario {
+    line-height: 2.3rem;
+    margin-top: 3rem;
+}
+
+.contato-formulario>h3 {
+    font-weight: 700;
+    font-size: 23.9555px;
+    line-height: 36px;
+    margin-bottom: 1rem;
+}
+
+#nome {
+    height: 2.554rem;
+    width: 22.458rem;
+    border-radius: 2.81829px;
+    border: 1.40915px solid #0E0E0E;
+}
+
+#email {
+    height: 2.554rem;
+    width: 22.458rem;
+    border-radius: 2.81829px;
+    border: 1.40915px solid #0E0E0E;
+}
+
+#mensagem {
+    width: 22.458rem;
+    height: 9.952rem;
+    border: 1.40915px solid #0E0E0E;
+    border-radius: 2.81829px;
+}
+
+#enviar {
+    width: 22.500rem;
+    height: 3.479rem;
+    border-radius: 6.34116px;
+    background-color: #F6C34A;
+    font-weight: 700;
+    font-size: 16.9098px;
+    line-height: 25px;
+    border: none;
+}
+
+#enviar:hover {
+    background-color: #f6c24ac7;
+}
+
+#enviar:active {
+    border: 2px solid black;
+}
+
+
+
+/* Footer */
+
+footer {
+    height: 35rem;
+    padding-left: 13rem;
+}
+
+#footer-logo {
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+}
+
+footer ul {
+    list-style: none;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 8.9rem;
+}
+
+footer ul li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px
+}
+
+#map {
+    width: 28.063rem;
+    height: 16.813rem;
+    margin-top: 1rem;
+    border: 2px solid black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.redes-sociais>li {
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: .2rem;
+}
+
+.bloco-footer {
+    display: flex;
+}
+
+.footer-links li {
+    padding-top: .8rem;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #0E0E0E;
+}
+
+.footer-adm li {
+    padding-top: .8rem;
+}
+
+/* Botão do Whatsapp */
+
+.whatsapp-button {
+    height: 5vh;
+    width: 5vh;
+    background-color: transparent;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 150px;
+    right: 100px;
+}

@@ -48,6 +48,7 @@ footer {
     max-width: 87.5rem;
     list-style: none;
     padding: 0;
+    font-weight: 700;
 }
 
 .menu-h ul li {
@@ -64,6 +65,10 @@ footer {
 
 .menu-h ul li a:hover {
     background-color: #e2dfdffd;
+}
+
+#home {
+    text-decoration: underline;
 }
 
 /* Primeira section */
@@ -107,6 +112,9 @@ footer {
     background-color: #0e0e0ef3;
 }
 
+.button-section1>a:active {
+    border: 2px solid white;
+}
 /* Segunda section */
 
 .home-section2 {
