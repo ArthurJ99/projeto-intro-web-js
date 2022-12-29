@@ -31,10 +31,24 @@
       <section class="contato-section">
         <form class="contato-formulario">
           <h3>Fale Conosco</h3>
-          <p>Nome <br> <input type="text" id="nome"/></p>
-          <p>Email <br> <input type="email" id="email"/></p>
-          <p>Mensagem <br> <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea></p>
-          <p><input type="submit" value="Enviar" id="enviar"></p>
+          <p>
+            <label for="nome">Nome</label> <br />
+            <input type="text" id="nome" />
+          </p>
+          <p>
+            <label for="email">Email</label> <br />
+            <input type="email" id="email" />
+          </p>
+          <p>
+            <label for="mensagem">Mensagem</label> <br />
+            <textarea
+              name="mensagem"
+              id="mensagem"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </p>
+          <p><input type="submit" value="Enviar" id="enviar" /></p>
         </form>
       </section>
     </main>
@@ -63,7 +77,7 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="./cursos.html">Cursos</a></li>
           <li>Blog</li>
-          <li><a href="./contato.html">Fale Conosco</a></li>
+          <li><a href="./contato.html" id="fale-conosco">Fale Conosco</a></li>
           <li>Termos e Condições</li>
           <li>Política de Privacidade</li>
           <li>FAQ</li>

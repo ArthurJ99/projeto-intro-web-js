@@ -107,12 +107,14 @@ footer {
     text-align: left;
 }
 
+#espaço {
+    height: 3rem;
+}
+
 .button-section1 {
     background-color: #0E0E0E;
     text-align: center;
     border-radius: 9px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
     color: #FBFBFB;
     font-weight: 700;
     font-size: 24px;
