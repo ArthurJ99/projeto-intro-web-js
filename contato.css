@@ -136,6 +136,7 @@ main {
 footer {
     height: 35rem;
     padding-left: 13rem;
+    border-top: 3px solid #000000;
 }
 
 #footer-logo {

@@ -6,28 +6,12 @@
     text-decoration: none;
 }
 
-main>section:nth-child(1) {
-    background-color: #F6C34A;
-}
-
-main>section:nth-child(2) {
-    background-color: #0E0E0E;
+main {
+    height: 48.625rem;
 }
 
 footer {
     background-color: #F6C34A;
-}
-
-/* Botão do Whatsapp */
-
-.whatsapp-button {
-    height: 5vh;
-    width: 5vh;
-    background-color: transparent;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 150px;
-    right: 100px;
 }
 
 /* Header */
@@ -58,6 +42,10 @@ footer {
     display: inline;
 }
 
+#adm {
+    text-decoration: underline;
+}
+
 .menu-h ul li a {
     color: #0E0E0E;
     padding: 30px;
@@ -70,100 +58,48 @@ footer {
     background-color: #e2dfdffd;
 }
 
-#cursos {
-    text-decoration: underline;
+/* ADM section 1 */
+
+.turmas {
+    background-color: #F6C34A;
+    height: 48.625rem;
+    width: 85vw;
+    float: right;
+    display: flex;
 }
 
-/* Cursos section 1 */
-.cursos-section1 {
-    height: 46rem;
-    text-align: center;
-    padding-top: 4rem;
-}
-
-.cursos-section1>article {
+.turmas>article{
     background-color: #FBFBFB;
-    display: inline-block;
-    width: 25rem;
-    height: 21rem;
-    border-radius: 10px;
-    margin: 4rem 1.5rem;
+    height: 23vh;
+    width: 12vw;
+    border-radius: 12px;
+    border: 1px solid black;
 }
 
-.cursos-section1>article>h2 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 51px;
-    margin-top: 2rem;
-}
+/* ADM section 2 */
 
-.cursos-section1>article>p {
-    margin: 3.2rem;
-    text-align: left;
-}
-
-#espaço {
-    height: 3rem;
-}
-
-.button-section1 {
-    background-color: #0E0E0E;
-    text-align: center;
-    border-radius: 9px;
-    color: #FBFBFB;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    padding: 1.3rem 7.3rem;
-}
-
-.button-section1:hover {
-    background-color: #0e0e0ee8;
-}
-
-.button-section1:active {
-    border: 2px solid white;
-}
-
-
-/* Cursos section 2 */
-
-.cursos-section2 {
-    background-color: #0E0E0E;
-    height: 70rem;
+.turmas-menu {
+    background-color: #000000;
+    height: 48.625rem;
+    width: 15vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 30rem;
-    row-gap: 2.5rem;
+    padding-left: 3vw;
+    padding-top: 6vh;
+    line-height: 6vh;
 }
 
-.cursos-section2>article {
-    background-color: white;
-    width: 58.125rem;
-    height: 14rem;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.turmas-menu>h4>a {
+    color: #ffff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px
 }
 
-.cursos-section2>article {
-    display: flex;
+.turmas-menu #cinza {
+    color: #707070;
 }
 
-.cursos-section2>article>ul>h3 {
-    margin-bottom: 1rem;
-}
-
-.cursos-section2>article>ul>li {
-    line-height: 1.7rem;
-}
-
-.cursos-section2>article>ul {
-    list-style: none;
-}
 
 /* Footer */
 
