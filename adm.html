@@ -9,40 +9,136 @@
       href="assets/favicon_io/favicon.ico"
       type="image/x-icon"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>LabeEscola - ADM</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="adm.css" />
   </head>
   <body>
     <header>
-      <a href="./index.html">
+      <a href="./home.html">
         <img src="./assets/LabEscola-Logo.png" alt="LabEscola logo" id="logo" />
       </a>
-      <nav class="menu-h">
+      <nav>
         <ul>
-          <li><a href="./index.html" id="home">Home</a></li>
-          <li><a href="./cursos.html">Cursos</a></li>
-          <li><a href="./contato.html">Contato</a></li>
-          <li><a href="./adm.html" id="adm">Área ADM</a></li>
+          <a href="./home.html" id="home"><li>Home</li></a>
+          <a href="./cursos.html" id="button-cursos"><li>Cursos</li></a>
+          <a href="./contato.html" id="button-contato"><li>contato</li></a>
+          <a href="./adm.html" id="button-adm"><li>Área ADM</li></a>
         </ul>
       </nav>
     </header>
     <main>
       <section class="turmas">
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
+        <div class="turmas-busca">
+          <input
+            type="text"
+            placeholder="    Digite o número da turma"
+            id="search-bar"
+          />
+          <input type="button" value="Buscar" id="search-button" />
+        </div>
+        <div class="turmas-cards">
+          <article>
+            <ul>
+              <h3>Hipátia</h3>
+              <li><strong>Curso: </strong>Javascript</li>
+              <li><strong>Início: </strong>30/11/2022</li>
+              <li><strong>Termino: </strong>30/01/2023</li>
+              <li><strong>Número de alunos: </strong>150</li>
+              <li><strong>Período: </strong>Noturno</li>
+              <li><strong>Concluido: </strong>Não</li>
+            </ul>
+          </article>
+          <article>
+            <ul>
+              <h3>Sibyla</h3>
+              <li><strong>Curso: </strong>Javascript</li>
+              <li><strong>Início: </strong>30/10/2022</li>
+              <li><strong>Termino: </strong>30/12/2022</li>
+              <li><strong>Número de alunos: </strong>200</li>
+              <li><strong>Período: </strong>Integral</li>
+              <li><strong>Concluido: </strong>Não</li>
+            </ul>
+          </article>
+          <article>
+            <ul>
+              <h3>Curie</h3>
+              <li><strong>Curso: </strong>HTML e CSS</li>
+              <li><strong>Início: </strong>15/09/2022</li>
+              <li><strong>Termino: </strong>15/10/2022</li>
+              <li><strong>Número de alunos: </strong>180</li>
+              <li><strong>Período: </strong>Noturno</li>
+              <li><strong>Concluido: </strong>Não</li>
+            </ul>
+          </article>
+          <article>
+            <ul>
+              <h3>Zhenyi</h3>
+              <li><strong>Curso: </strong>HTML e CSS</li>
+              <li><strong>Início: </strong>01/11/2022</li>
+              <li><strong>Termino: </strong>01/01/2023</li>
+              <li><strong>Número de alunos: </strong>80</li>
+              <li><strong>Período: </strong>Integral</li>
+              <li><strong>Concluido: </strong>Não</li>
+            </ul>
+          </article>
+          <article>
+            <ul>
+              <h3>Clarke</h3>
+              <li><strong>Curso: </strong>HTML e CSS</li>
+              <li><strong>Início: </strong>04/07/2022</li>
+              <li><strong>Termino: </strong>04/09/2022</li>
+              <li><strong>Número de alunos: </strong>200</li>
+              <li><strong>Período: </strong>Noturno</li>
+              <li><strong>Concluido: </strong>Sim</li>
+            </ul>
+          </article>
+          <article>
+            <ul>
+              <h3>Blackwell</h3>
+              <li><strong>Curso: </strong>APIs Rest</li>
+              <li><strong>Início: </strong>20/03/2022</li>
+              <li><strong>Termino: </strong>20/06/2022</li>
+              <li><strong>Número de alunos: </strong>100</li>
+              <li><strong>Período: </strong>Integral</li>
+              <li><strong>Concluido: </strong>Sim</li>
+            </ul>
+          </article>
+          <article>
+            <ul>
+              <h3>Elion</h3>
+              <li><strong>Curso: </strong>APIs Rest</li>
+              <li><strong>Início: </strong>12/01/2022</li>
+              <li><strong>Termino: </strong>12/06/2022</li>
+              <li><strong>Número de alunos: </strong>200</li>
+              <li><strong>Período: </strong>Noturno</li>
+              <li><strong>Concluido: </strong>Sim</li>
+            </ul>
+          </article>
+          <article>
+            <ul>
+              <h3>Burnell</h3>
+              <li><strong>Curso: </strong>APIs Rest</li>
+              <li><strong>Início: </strong>18/10/2022</li>
+              <li><strong>Termino: </strong>18/04/2023</li>
+              <li><strong>Número de alunos: </strong>90</li>
+              <li><strong>Período: </strong>Integral</li>
+              <li><strong>Concluido: </strong>Não</li>
+            </ul>
+          </article>
+        </div>
       </section>
-      <section class="turmas-menu">
-        <h4><a href="./adm.html">Turmas</a></h4>
+      <aside class="turmas-menu">
+        <h4><a href="./adm.html" id="turmas-aside-button">Turmas</a></h4>
         <h4><a href="./matriculas.html" id="cinza">Matriculas</a></h4>
         <h4><a href="./financeiro.html" id="cinza">Financeiro Alunos</a></h4>
-      </section>
+      </aside>
     </main>
     <footer>
       <div id="footer-logo">
@@ -50,23 +146,23 @@
       </div>
       <div class="bloco-footer">
         <ul>
-          Endereço
+          <h3>Endereço</h3>
           <div id="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.2496426112093!2d-46.698635612747196!3d-23.568494826000375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1671740975962!5m2!1spt-BR!2sbr"
               width="445"
               height="265"
-              style="border: 0"
+              style="border: 2px solid black"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <p>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
           </div>
+          <p>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
         </ul>
         <ul class="footer-links">
-          Links
-          <li><a href="./index.html">Home</a></li>
+          <h3>Links</h3>
+          <li><a href="./home.html">Home</a></li>
           <li><a href="./cursos.html">Cursos</a></li>
           <li>Blog</li>
           <li><a href="./contato.html">Fale Conosco</a></li>
@@ -75,7 +171,7 @@
           <li>FAQ</li>
         </ul>
         <ul>
-          Redes sociais
+          <h3>Redes sociais</h3>
           <div class="redes-sociais">
             <li>
               <a href="https://twitter.com"
@@ -100,7 +196,7 @@
           </div>
         </ul>
         <ul class="footer-adm">
-          Área restrita
+          <h3>Área restrita</h3>
           <li>Área administrativa</li>
           <li>Espaço do aluno</li>
         </ul>
