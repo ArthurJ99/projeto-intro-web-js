@@ -224,6 +224,10 @@ footer h3 {
     gap: 1rem;
 }
 
+.footer-adm li a{
+    color: #0e0e0e;
+}
+
 /* Botão do Whatsapp */
 
 .whatsapp-button {

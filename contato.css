@@ -108,6 +108,8 @@ textarea {
     font-weight: 700;
     font-size: 16.9098px;
     line-height: 25px;
+    margin-top: 1rem;
+    transition: background .5s;
 }
 
 #button-enviar:hover {
@@ -162,6 +164,10 @@ footer h3 {
 .redes-sociais {
     display: flex;
     gap: 1rem;
+}
+
+.footer-adm li a{
+    color: #0e0e0e;
 }
 
 /* Botão do Whatsapp */
