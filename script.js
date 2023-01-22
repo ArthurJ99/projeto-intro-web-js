@@ -115,6 +115,12 @@ const estudantes = [
     }
 ];
 
+const input = document.getElementById('search-bar')
+const botaoBuscar = document.getElementById('search-button');
+botaoBuscar.addEventListener('click', ()=>{
+    buscarTurma(input.value)
+})
+
 //Laços
 
 const buscarCurso=(nomeCurso)=>{
@@ -125,14 +131,44 @@ const buscarCurso=(nomeCurso)=>{
 //console.log(buscarCurso("apisrest".toLowerCase()));
 
 const buscarTurma=(nomeTurma)=>{
-    const resultBusca = nomeTurma
-    let busca=turmas.filter(obj => obj.turma.toLowerCase() === resultBusca)
-    if (busca.length<1) {
-        console.log('Turma não encontrada!');
+    const listaDeTurmas = document.getElementById('turmas-cards')
+    console.log(listaDeTurmas);
+    let busca=turmas.filter(obj => obj.turma.toLowerCase().includes(nomeTurma))
+    if (busca.length<1 && !input.value) {
+        listaDeTurmas.innerHTML = ''
+        const cards = gerarCard(turmas)
+        cards.forEach(element => {
+        listaDeTurmas.innerHTML += element
+    });
+    }else if (
+        busca.length<1 && input.value
+    ) {
+        Swal.fire('Turma não encontrada')
     } else {
-        console.log(busca[0]);
+        listaDeTurmas.innerHTML = ''
+        const cards = gerarCard(busca)
+        cards.forEach(element => {
+        listaDeTurmas.innerHTML += element
+    });
     }
-} 
+}  
+
+const gerarCard = (turmasBuscadas) => {
+    const cards = turmasBuscadas.map(turma => {
+        return `<article>
+        <ul>
+            <h3>${turma.turma}</h3>
+            <li><strong>Curso: </strong>${turma.curso}</li>
+            <li><strong>Início: </strong>${turma.inicio}</li>
+            <li><strong>Termino: </strong>${turma.termino}</li>
+            <li><strong>Número de alunos: </strong>${turma.numeroDeAlunos}</li>
+            <li><strong>Período: </strong>${turma.periodo}</li>
+            <li><strong>Concluido: </strong>${turma.concluida ? "Sim": "Não"}</li>
+        </ul>
+        </article>`
+    })
+    return cards
+}
 
 //buscarTurma("Burnell".toLowerCase());
 

@@ -47,7 +47,11 @@ nav li {
 }
 
 nav ul li:hover {
-    background-color: #ece6e6;
+    text-decoration: underline;
+}
+
+#button-home {
+    text-decoration: underline #000000;
 }
 
 /* Section 1 */

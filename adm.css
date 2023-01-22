@@ -51,7 +51,7 @@ nav li {
 }
 
 nav ul li:hover {
-    background-color: #ece6e6;
+    text-decoration: underline;
 }
 
 #button-adm {
@@ -85,15 +85,18 @@ nav ul li:hover {
     width: 15vw;
     border: none;
     border-radius: 4px 0 0 4px;
+    padding-left: 10px;
 }
 
 #search-button {
     width: 6vw;
+    height: 4vh;
     border: none;
     border-radius: 0 4px 4px 0;
     background-color: #0e0e0e;
     color: #ffff;
     transition: background .5s;
+    font-size: large;
 }
 
 #search-button:hover {
@@ -211,6 +214,6 @@ footer h3 {
     gap: 1rem;
 }
 
-.footer-adm li a{
+.footer-adm li a {
     color: #0e0e0e;
 }

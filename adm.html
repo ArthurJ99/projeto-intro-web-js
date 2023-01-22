@@ -16,7 +16,9 @@
       rel="stylesheet"
     />
     <title>LabEscola - ADM</title>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js" type="text/html"></script>
     <link rel="stylesheet" href="adm.css" />
   </head>
   <body>
@@ -38,100 +40,12 @@
         <div class="turmas-busca">
           <input
             type="text"
-            placeholder="    Digite o número da turma"
+            placeholder="Digite o nome da turma"
             id="search-bar"
           />
-          <input type="button" value="Buscar" id="search-button" />
+          <button id="search-button">Buscar</button>
         </div>
-        <div class="turmas-cards">
-          <article>
-            <ul>
-              <h3>Hipátia</h3>
-              <li><strong>Curso: </strong>Javascript</li>
-              <li><strong>Início: </strong>30/11/2022</li>
-              <li><strong>Termino: </strong>30/01/2023</li>
-              <li><strong>Número de alunos: </strong>150</li>
-              <li><strong>Período: </strong>Noturno</li>
-              <li><strong>Concluido: </strong>Não</li>
-            </ul>
-          </article>
-          <article>
-            <ul>
-              <h3>Sibyla</h3>
-              <li><strong>Curso: </strong>Javascript</li>
-              <li><strong>Início: </strong>30/10/2022</li>
-              <li><strong>Termino: </strong>30/12/2022</li>
-              <li><strong>Número de alunos: </strong>200</li>
-              <li><strong>Período: </strong>Integral</li>
-              <li><strong>Concluido: </strong>Não</li>
-            </ul>
-          </article>
-          <article>
-            <ul>
-              <h3>Curie</h3>
-              <li><strong>Curso: </strong>HTML e CSS</li>
-              <li><strong>Início: </strong>15/09/2022</li>
-              <li><strong>Termino: </strong>15/10/2022</li>
-              <li><strong>Número de alunos: </strong>180</li>
-              <li><strong>Período: </strong>Noturno</li>
-              <li><strong>Concluido: </strong>Não</li>
-            </ul>
-          </article>
-          <article>
-            <ul>
-              <h3>Zhenyi</h3>
-              <li><strong>Curso: </strong>HTML e CSS</li>
-              <li><strong>Início: </strong>01/11/2022</li>
-              <li><strong>Termino: </strong>01/01/2023</li>
-              <li><strong>Número de alunos: </strong>80</li>
-              <li><strong>Período: </strong>Integral</li>
-              <li><strong>Concluido: </strong>Não</li>
-            </ul>
-          </article>
-          <article>
-            <ul>
-              <h3>Clarke</h3>
-              <li><strong>Curso: </strong>HTML e CSS</li>
-              <li><strong>Início: </strong>04/07/2022</li>
-              <li><strong>Termino: </strong>04/09/2022</li>
-              <li><strong>Número de alunos: </strong>200</li>
-              <li><strong>Período: </strong>Noturno</li>
-              <li><strong>Concluido: </strong>Sim</li>
-            </ul>
-          </article>
-          <article>
-            <ul>
-              <h3>Blackwell</h3>
-              <li><strong>Curso: </strong>APIs Rest</li>
-              <li><strong>Início: </strong>20/03/2022</li>
-              <li><strong>Termino: </strong>20/06/2022</li>
-              <li><strong>Número de alunos: </strong>100</li>
-              <li><strong>Período: </strong>Integral</li>
-              <li><strong>Concluido: </strong>Sim</li>
-            </ul>
-          </article>
-          <article>
-            <ul>
-              <h3>Elion</h3>
-              <li><strong>Curso: </strong>APIs Rest</li>
-              <li><strong>Início: </strong>12/01/2022</li>
-              <li><strong>Termino: </strong>12/06/2022</li>
-              <li><strong>Número de alunos: </strong>200</li>
-              <li><strong>Período: </strong>Noturno</li>
-              <li><strong>Concluido: </strong>Sim</li>
-            </ul>
-          </article>
-          <article>
-            <ul>
-              <h3>Burnell</h3>
-              <li><strong>Curso: </strong>APIs Rest</li>
-              <li><strong>Início: </strong>18/10/2022</li>
-              <li><strong>Termino: </strong>18/04/2023</li>
-              <li><strong>Número de alunos: </strong>90</li>
-              <li><strong>Período: </strong>Integral</li>
-              <li><strong>Concluido: </strong>Não</li>
-            </ul>
-          </article>
+        <div class="turmas-cards" id="turmas-cards">
         </div>
       </section>
       <aside class="turmas-menu">
