@@ -118,27 +118,18 @@ const estudantes = [
 const input = document.getElementById('search-bar')
 const botaoBuscar = document.getElementById('search-button');
 botaoBuscar.addEventListener('click', ()=>{
-    buscarTurma(input.value)
+    buscarTurma(input.value);
+    input.value =''
 })
-
-//Laços
-
-const buscarCurso=(nomeCurso)=>{
-    const busca = cursos.find(element=> element.curso.toLowerCase()===nomeCurso);
-    return busca
-}
-
-//console.log(buscarCurso("apisrest".toLowerCase()));
 
 const buscarTurma=(nomeTurma)=>{
     const listaDeTurmas = document.getElementById('turmas-cards')
-    console.log(listaDeTurmas);
-    let busca=turmas.filter(obj => obj.turma.toLowerCase().includes(nomeTurma))
+    let busca=turmas.filter(obj => obj.turma.toLowerCase().startsWith(nomeTurma.toLowerCase()))
     if (busca.length<1 && !input.value) {
         listaDeTurmas.innerHTML = ''
         const cards = gerarCard(turmas)
         cards.forEach(element => {
-        listaDeTurmas.innerHTML += element
+            listaDeTurmas.innerHTML += element
     });
     }else if (
         busca.length<1 && input.value
@@ -148,7 +139,7 @@ const buscarTurma=(nomeTurma)=>{
         listaDeTurmas.innerHTML = ''
         const cards = gerarCard(busca)
         cards.forEach(element => {
-        listaDeTurmas.innerHTML += element
+            listaDeTurmas.innerHTML += element
     });
     }
 }  
@@ -170,7 +161,10 @@ const gerarCard = (turmasBuscadas) => {
     return cards
 }
 
-//buscarTurma("Burnell".toLowerCase());
+const buscarCurso=(nomeCurso)=>{
+    const busca = cursos.find(element=> element.curso.toLowerCase()===nomeCurso);
+    return busca
+}
 
 const buscarEstudante=(nomeEstudante)=>{
     for (i = 0; i < estudantes.length; i++){
@@ -180,9 +174,6 @@ const buscarEstudante=(nomeEstudante)=>{
     }
     return 'Aluno não encontrado!'
 }
-
-//console.log(buscarEstudante(""));
-
 
 const matricular=(nome,curso,turma,nParcelas)=>{
     estudantes.push({
@@ -197,7 +188,6 @@ const matricular=(nome,curso,turma,nParcelas)=>{
     console.log(estudantes);
     console.log("Aluno Matriculado",estudantes[estudantes.length -1]);
 }
-//matricular("arthur jordi","HTML e CSS","Curie",2)
 
 //FUNÇÕES DE DESCONTO
 const descontoParcela=(nParcelas)=>{
