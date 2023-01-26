@@ -117,10 +117,12 @@ const estudantes = [
 
 const input = document.getElementById('search-bar')
 const botaoBuscar = document.getElementById('search-button');
-botaoBuscar.addEventListener('click', ()=>{
-    buscarTurma(input.value);
-    input.value =''
-})
+if (botaoBuscar) {
+    botaoBuscar.addEventListener('click', ()=>{
+        buscarTurma(input.value);
+        input.value =''
+    })
+}
 
 const buscarTurma=(nomeTurma)=>{
     const listaDeTurmas = document.getElementById('turmas-cards')
@@ -175,19 +177,59 @@ const buscarEstudante=(nomeEstudante)=>{
     return 'Aluno não encontrado!'
 }
 
-const matricular=(nome,curso,turma,nParcelas)=>{
+const botaoMatricula = document.getElementById('matricula-button')
+if (botaoMatricula) {
+    botaoMatricula.addEventListener('click', (event)=>{
+        event.preventDefault();
+        matricular();
+    })
+}
+
+const getFormData = (inputs)=> {
+    const values ={}
+    inputs.forEach(input=>{
+        values[input.name]=input.value
+    })
+    return values
+}
+
+const matricular=()=>{
+    const inputs = document.querySelectorAll('input');
+    const {nome,curso,turma,nParcelas}=getFormData(inputs)
     estudantes.push({
         estudante:nome,
         turma:turma,
         curso:curso,
-        valor:buscarCurso(curso.toLowerCase()).valor,
+        valor:buscarCurso(curso.toLowerCase())?.valor,
         nParcelas:nParcelas,
         desconto:nParcelas<=2,
-        parcelas:(buscarCurso(curso.toLowerCase()).valor/nParcelas)
+        parcelas:(buscarCurso(curso.toLowerCase())?.valor/nParcelas)
     })
-    console.log(estudantes);
-    console.log("Aluno Matriculado",estudantes[estudantes.length -1]);
+    inputs.forEach(input=>{
+        input.value =''
+    })
+    const resultMatricula = document.getElementById('matricula-result');
+    resultMatricula.innerHTML=`
+    <div id="matricula-relatorio">
+            <h3>Aluno Matriculado</h3>
+            <ul>
+                <p>Aluno Matriculado</p>
+                <li>Nome: ${nome}</li>
+                <li>Curso: ${curso}</li>
+                <li>Turma: ${turma}</li>
+                <li>Número de parcelas: ${nParcelas}</li>
+            </ul>
+            </div>
+            <img src="assets/Vector.png" alt="confirm" />
+            `
 }
+
+const relatorioEstudante=(nomeEstudante)=>{
+    return `Aluno: ${buscarEstudante(nomeEstudante).estudante}\nTurma: ${buscarEstudante(nomeEstudante).turma}\nCurso: ${buscarEstudante(nomeEstudante).curso}\nValor Total: R$${buscarEstudante(nomeEstudante).valor}\nValor Parcela: R$${buscarEstudante(nomeEstudante).parcelas}\nN* Parcelas: ${buscarEstudante(nomeEstudante).nParcelas}`
+}
+
+
+//console.log(relatorioEstudante("chris evans".toLowerCase()));
 
 //FUNÇÕES DE DESCONTO
 const descontoParcela=(nParcelas)=>{
@@ -247,9 +289,3 @@ const adcValorCarrinho=(nomeCurso)=>{
 //adcValorCarrinho("javascript");
 //console.log(carrinhoCursos);
 
-const relatorioEstudante=(nomeEstudante)=>{
-    return `Aluno: ${buscarEstudante(nomeEstudante).estudante}\nTurma: ${buscarEstudante(nomeEstudante).turma}\nCurso: ${buscarEstudante(nomeEstudante).curso}\nValor Total: R$${buscarEstudante(nomeEstudante).valor}\nValor Parcela: R$${buscarEstudante(nomeEstudante).parcelas}\nN* Parcelas: ${buscarEstudante(nomeEstudante).nParcelas}`
-}
-
-
-//console.log(relatorioEstudante("chris evans".toLowerCase()));

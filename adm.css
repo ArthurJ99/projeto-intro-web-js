@@ -111,15 +111,17 @@ nav ul li:hover {
     width: 70%;
     height: 70%;
     margin-top: 4vh;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 27vh);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 3rem;
 }
 
 .turmas-cards article {
     background-color: #ffff;
     border-radius: 12px;
+    height: 40%;
+    
 }
 
 .turmas-cards ul {
