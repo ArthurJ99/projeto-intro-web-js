@@ -67,7 +67,7 @@ nav ul li:hover {
     display: flex;
     justify-content: center;
     gap: 15vw;
-    padding-top: 15vh;
+    padding-top: 10vh;
 }
 
 .matricula-form {

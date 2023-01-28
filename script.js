@@ -19,7 +19,7 @@ const cursos = [
 
 const turmas = [
     {
-    turma:"Hipátia",
+    turma:"Hipatia",
     curso:"JavaScript",
     inicio:"30/11/2022",
     termino:"30/01/2023",
@@ -115,6 +115,8 @@ const estudantes = [
     }
 ];
 
+//Turmas
+
 const input = document.getElementById('search-bar')
 const botaoBuscar = document.getElementById('search-button');
 if (botaoBuscar) {
@@ -148,7 +150,8 @@ const buscarTurma=(nomeTurma)=>{
 
 const gerarCard = (turmasBuscadas) => {
     const cards = turmasBuscadas.map(turma => {
-        return `<article>
+        return `
+    <article>
         <ul>
             <h3>${turma.turma}</h3>
             <li><strong>Curso: </strong>${turma.curso}</li>
@@ -158,23 +161,16 @@ const gerarCard = (turmasBuscadas) => {
             <li><strong>Período: </strong>${turma.periodo}</li>
             <li><strong>Concluido: </strong>${turma.concluida ? "Sim": "Não"}</li>
         </ul>
-        </article>`
+    </article>`
     })
     return cards
 }
 
-const buscarCurso=(nomeCurso)=>{
-    const busca = cursos.find(element=> element.curso.toLowerCase()===nomeCurso);
-    return busca
-}
+//Matricula
 
-const buscarEstudante=(nomeEstudante)=>{
-    for (i = 0; i < estudantes.length; i++){
-        if (estudantes[i].estudante.toLowerCase().startsWith(nomeEstudante.toLowerCase())) {
-            return estudantes[i]
-        }
-    }
-    return 'Aluno não encontrado!'
+const buscarCurso=(nomeCurso)=>{
+    const busca = cursos.find(element=> element.curso.toLowerCase().startsWith(nomeCurso.toLowerCase()));
+    return busca
 }
 
 const botaoMatricula = document.getElementById('matricula-button')
@@ -211,33 +207,70 @@ const matricular=()=>{
     const resultMatricula = document.getElementById('matricula-result');
     resultMatricula.innerHTML=`
     <div id="matricula-relatorio">
-            <h3>Aluno Matriculado</h3>
-            <ul>
-                <p>Aluno Matriculado</p>
-                <li>Nome: ${nome}</li>
-                <li>Curso: ${curso}</li>
-                <li>Turma: ${turma}</li>
-                <li>Número de parcelas: ${nParcelas}</li>
-            </ul>
-            </div>
-            <img src="assets/Vector.png" alt="confirm" />
-            `
+        <h3>Aluno Matriculado</h3>
+        <ul>
+            <p>Aluno Matriculado</p>
+            <li>Nome: ${nome}</li>
+            <li>Curso: ${curso}</li>
+            <li>Turma: ${turma}</li>
+            <li>Número de parcelas: ${nParcelas}</li>
+        </ul>
+    </div>
+    <img src="assets/Vector.png" alt="confirm" />
+    `
 }
 
-const relatorioEstudante=(nomeEstudante)=>{
-    return `Aluno: ${buscarEstudante(nomeEstudante).estudante}\nTurma: ${buscarEstudante(nomeEstudante).turma}\nCurso: ${buscarEstudante(nomeEstudante).curso}\nValor Total: R$${buscarEstudante(nomeEstudante).valor}\nValor Parcela: R$${buscarEstudante(nomeEstudante).parcelas}\nN* Parcelas: ${buscarEstudante(nomeEstudante).nParcelas}`
+//Relatório
+
+const nomeRelatorio = document.getElementById('relatorio-nome');
+const relatorioButton = document.getElementById('relatorio-button');
+if (relatorioButton) {
+    relatorioButton.addEventListener('click', ()=>{
+        buscarEstudante(nomeRelatorio.value)
+        nomeRelatorio.value=''
+    })
 }
 
+const buscarEstudante = (nomeEstudante)=>{
+    const listaDeAlunos = document.getElementById('relatorio-result');
+    let buscaAluno = estudantes.filter(obj => obj.estudante.toLowerCase().startsWith(nomeEstudante.toLowerCase()));
+    if(!nomeEstudante){
+        Swal.fire('Digite um nome para pesquisar')
+    }else if (buscaAluno.length>0) {
+        listaDeAlunos.innerHTML=''
+        const relatorio = relatorioEstudante(buscaAluno)
+        relatorio.forEach(element=>{
+            listaDeAlunos.innerHTML += element
+        })
+    }else{
+        Swal.fire('Aluno não encontrado')
+    }
+}
 
-//console.log(relatorioEstudante("chris evans".toLowerCase()));
+const relatorioEstudante=(estudanteBuscado)=>{
+    const relatorio = estudanteBuscado.map(aluno=>{
+        return `
+    <ul>
+        <li>Aluno: ${aluno.estudante}</li>
+        <li>Turma: ${aluno.turma}</li>
+        <li>Curso: ${aluno.curso}</li>
+        <li>Valor total: ${aluno.valor}</li>
+        <li>Valor parcela: ${aluno.parcelas}</li>
+        <li>N.º parcelas: ${aluno.nParcelas}</li>
+    </ul>`
+    })
+    return relatorio
+}
 
 //FUNÇÕES DE DESCONTO
+
+const simuladorResult = document.getElementById('result-mensage');
+
 const descontoParcela=(nParcelas)=>{
     if (nParcelas<=2) {
         return 0.2
-    } else {
-        return 0
     }
+    return 0
 }
 
 const parcelarCurso=(valorCursos,nParcelas)=>{
@@ -248,7 +281,8 @@ const parcelarCurso=(valorCursos,nParcelas)=>{
     }
     switch (valorCursos.length) {
         case 0:
-            return "O carrinho está vazio"
+            Swal.fire('O carrinho está vazio')
+            return ''
         case 1:
             desconto -= descontoParcela(nParcelas) 
             totalCompra =totalCompra*desconto
@@ -280,12 +314,21 @@ const parcelarCurso=(valorCursos,nParcelas)=>{
 
 const carrinhoCursos=[]
 
-//console.log(parcelarCurso(carrinhoCursos,2));
-
-const adcValorCarrinho=(nomeCurso)=>{
-    carrinhoCursos.push(buscarCurso(nomeCurso).valor)
+const adcValorCarrinho=()=>{
+    const curso = document.getElementById('add-curso');
+    carrinhoCursos.push(buscarCurso(curso.value).valor)
+    curso.value=''
 }
 
-//adcValorCarrinho("javascript");
-//console.log(carrinhoCursos);
+const incluirCurso = document.getElementById('incluir-curso');
+incluirCurso.addEventListener('click', (event)=>{
+    event.preventDefault();
+    adcValorCarrinho();
+})
 
+const simuladorButton = document.getElementById('simulador-button');
+simuladorButton.addEventListener('click', ()=>{
+    const parcelasCurso = document.getElementById('parcelas-curso');
+    simuladorResult.innerText=parcelarCurso(carrinhoCursos,parcelasCurso.value)
+    parcelasCurso.value=''
+})

@@ -16,6 +16,8 @@
       rel="stylesheet"
     />
     <title>LabEscola - Financeiro</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js" type="text/html"></script>
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="financeiro.css" />
   </head>
@@ -39,24 +41,26 @@
           <h3 id="titulo">Financeiro</h3>
           <label for="user"
             ><p><strong>Curso</strong></p>
-            <input type="text" />
-            <a href="">Adicionar Curso</a>
+            <input type="text" id="add-curso"/>
+            <a href="#" id="incluir-curso">Adicionar Curso</a>
             <p><strong>Número de Parcelas</strong></p>
-            <input type="number" />
-            <button>Ver Valor</button>
+            <input type="number" id="parcelas-curso" />
+            <button id="simulador-button">Ver Valor</button>
           </label>
-          <div class="simulador-result">
+          <div class="simulador-result" id="simulador-result">
             <h3>Valor</h3>
+            <p id="result-mensage"></p>
           </div>
         </div>
         <div class="relatorio-aluno">
           <h3 id="titulo">Relatório do Aluno</h3>
           <label for="user">
             <p><strong>Nome</strong></p>
-            <input type="text" />
-            <button>Buscar</button>
+            <input type="text" id="relatorio-nome"/>
+            <button id="relatorio-button">Buscar</button>
           </label>
-          <div class="relatorio-result">TESTE</div>
+          <div class="relatorio-result" id="relatorio-result">
+          </div>
         </div>
       </section>
       <aside class="financeiro-menu">
