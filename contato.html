@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>LabEscola - Contato</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="contato.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="./assets/LabEscola-Logo.png" alt="LabEscola logo" id="logo" />
+      </a>
+      <nav>
+        <ul>
+          <a href="index.html" id="home"><li>Home</li></a>
+          <a href="./cursos.html" id="button-cursos"><li>Cursos</li></a>
+          <a href="./contato.html" id="button-contato"><li>contato</li></a>
+          <a href="./adm.html"><li>Área ADM</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="contato-section">
+        <form class="contato-form">
+          <h3>Fale Conosco</h3>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" />
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            name="mensagem"
+            id="mensagem"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="Enviar" id="button-enviar" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="bloco-footer">
+        <ul id="footer-map">
+          <img src="./assets/LabEscola-Logo.png" alt="LabEscola-Logo" />
+          <h3>Endereço</h3>
+          <div id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.2496426112093!2d-46.698635612747196!3d-23.568494826000375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1671740975962!5m2!1spt-BR!2sbr"
+              width="445"
+              height="265"
+              style="border: 2px solid black"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <p>R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+        </ul>
+        <ul class="footer-links">
+          <h3>Links</h3>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./cursos.html">Cursos</a></li>
+          <li>Blog</li>
+          <li><a href="./contato.html">Fale Conosco</a></li>
+          <li>Termos e Condições</li>
+          <li>Política de Privacidade</li>
+          <li>FAQ</li>
+        </ul>
+        <ul class="links-redes">
+          <h3>Redes sociais</h3>
+          <div id="redes-sociais">
+            <li>
+              <a href="https://twitter.com"
+                ><img src="./assets/twitter-logo.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://br.linkedin.com"
+                ><img src="./assets/linkedin-logo.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com"
+                ><img src="./assets/facebook-logo.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com"
+                ><img src="./assets/instagram-logo.png" alt=""
+              /></a>
+            </li>
+          </div>
+        </ul>
+        <ul class="footer-adm">
+          <h3>Área restrita</h3>
+          <li>
+            <a href="adm.html">Área administrativa</a>
+          </li>
+          <li>Espaço do aluno</li>
+        </ul>
+      </div>
+    </footer>
+    <div class="whatsapp-button">
+      <a href="https://www.whatsapp.com"
+        ><img
+          src="./assets/logos_whatsapp-icon.png"
+          alt="logo do whatsapp"
+          id="whatsapp-logo"
+          width="70rem"
+      /></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Header */
+
+header {
+    height: 10vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+header>a {
+    width: 11vw;
+    margin-left: 10vw;
+}
+
+nav ul {
+    height: 5vh;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+nav li {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0e0e0e;
+    transition: background .5s;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+#button-cursos {
+    text-decoration: underline #000000d3;
+}
+
+/* Section 1 */
+
+.cursos-section1 {
+    background-color: #F6C34A;
+    height: 83.7vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(3, 25vw);
+    justify-items: center;
+    align-items: center;
+}
+
+.cursos article {
+    background-color: #ffff;
+    border-radius: 12px;
+    height: 100%;
+    width: 85%;
+    padding: 1%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cursos p {
+    text-align: left;
+    margin: 5%;
+    margin-top: 10%;
+}
+
+.cursos h2 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 51px;
+}
+
+.button-section1 {
+    background-color: #0e0e0e;
+    color: #ffff;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.7vh;
+    width: 22vw;
+    margin-top: 12vh;
+    transition: background .5s;
+}
+
+.button-section1:hover {
+    background-color: #0e0e0ee0;
+}
+
+.button-section1:active {
+    border: 2px solid #ece6e6;
+}
+
+/* Section 2 */
+
+.cursos-section2 {
+    background-color: #0e0e0e;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursos-section2 article {
+    background-color: #ffff;
+    border: 1px solid black;
+    display: flex;
+    width: 45vw;
+    height: 20vh;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 12px;
+    margin: .6rem 0;
+}
+
+.cursos-section2 ul {
+    list-style: none;
+}
+
+/* Footer */
+
+footer {
+    background-color: #F6C34A;
+    height: 57vh;
+}
+
+.bloco-footer {
+    display: flex;
+    justify-content: center;
+    gap: 7%;
+}
+
+.bloco-footer ul {
+    list-style: none;
+}
+
+.bloco-footer li,
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    line-height: 2rem;
+}
+
+footer h3 {
+    margin-bottom: 1%;
+    margin-top: 6%;
+}
+
+#footer-map {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-map>img {
+    height: 40%;
+    width: 50%;
+    margin-top: 8%;
+}
+
+.footer-links li a {
+    color: #0e0e0e;
+}
+
+#redes-sociais {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-adm li a {
+    color: #0e0e0e;
+}
+
+.footer-links,
+.links-redes,
+.footer-adm {
+    margin-top: 6.9%;
+}
+
+/* Botão do Whatsapp */
+
+.whatsapp-button {
+    height: 5vh;
+    width: 5vh;
+    background-color: transparent;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 150px;
+    right: 45px;
+}
